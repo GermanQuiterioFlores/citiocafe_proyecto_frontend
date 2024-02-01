@@ -1,0 +1,127 @@
+:root{
+    --fuenteHeading: "PT Sans", sans-serif;
+    --fuenteParrafos: "Open Sans", sans-serif;
+    --fuenteCool: "Honk", system-ui;
+
+    --primario: #784D3C;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;    /*1rem es igual a 10px con esto*/
+}
+*, *:before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Globales */
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto; /* para centrarlo*/
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeading);
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font: 2.8rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+/** Utilidades **/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/** Header **/
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover; /* para que abarque bien el tamaño de la imagen en ese espacio*/
+    background-repeat: no-repeat; /* si hay mucho espacio en pantalla no duplique el contenido*/
+    background-position: center center;/*para que cuando sean mas pequeños se centren bien, 
+    configurando arriba/abajo center y derecha/izquierda center */
+}
+
+.header__texto{
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 16rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;/*alinear horizontalmente*/
+        align-items: center;/* Para alinear verticalmente*/
+        
+    }
+    
+}
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: 400;
+    padding-top: 2rem;
+}
+.logo__bold{
+    font-weight: 900;
+    
+}
+
+/* NAVEGACION */
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    padding: 1rem;
+}
