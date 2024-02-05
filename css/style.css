@@ -26,7 +26,8 @@ body{
 /* Globales */
 .contenedor{
     max-width: 120rem;
-    width: 90%;
+    width: 90%; /* para que el texto y todo no se pegue a las orillas, al menos quede un espacio y se ve mejor asi*/
+    width: min(90%, 120rem);
     margin: 0 auto; /* para centrarlo*/
 }
 
@@ -97,6 +98,9 @@ img{
     }
     
 }
+.barra-superior{
+    padding-top: 3rem;
+}
 
 .logo{
     color: var(--blanco);
@@ -104,7 +108,7 @@ img{
 
 .logo__nombre{
     font-weight: 400;
-    padding-top: 2rem;
+    padding: 2rem 0rem;
 }
 .logo__bold{
     font-weight: 900;
@@ -202,3 +206,65 @@ img{
     font-size: 2rem;
 }
 
+/* FOOTER */
+.footer{
+    background-color: var(--negro);
+    padding: 4rem 0; /* 3 rem arriba y abajo y 0 izquierda y derechas*/
+    margin-top: 4rem;
+}
+
+/*SOBRE NOSOTROS*/
+
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 3rem 0;
+        border: 5px solid #000;
+    }
+    .sobre-nosotros__imagen{
+       padding: 3rem 0rem;
+    }
+
+}
+
+
+/*CURSOS*/
+.curso{
+    padding: 3rem 0;
+    border-bottom: 3px solid #967b7b;
+}
+.curso:last-of-type{
+    border-bottom: none;
+}
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+    }
+}
+.curso__descripcion{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+/* Entrada blog*/
+.entrada-blog__imagen{
+    max-width: 100%;
+}
+@media (min-width: 768px) {
+    .entrada-blog__imagen{
+        width: 50%;
+        height: auto;
+        position: relative;
+        left: 25%;
+        right: 25%;
+    }
+}
+.entrada-blog__descripcion{
+    text-align: justify;
+}
