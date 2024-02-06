@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <title>Blog de café</title>
+    
+    <!--PRE-FETCH-->
+    <!--Solo para aquellos que realmente creemos que va a ir el usuario-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+
+    <!------------------------------------------->
+    <!--PRE-LOAD-->
+    <!--De algo interno-->
+    <link rel="preload" href="css/normalize.css" as="style" >
+    <link rel="preload" href="css/style.css" as="style">
+    <!--PRE-LOAD de algo externo-->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Honk&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="font" crossorigin="crossorigin">
+    <!--PRE-LOAD de imagenes-->
+    <link rel="preload" href="img/blog1.jpg" as="image">
+
+
+    <!------------------------------------------->
+    <!--Ahora sí, cargando las hojas de estilo-->
+    <!--Intenno-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--Externo-->
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <header class="header">
@@ -37,7 +60,10 @@
             <h3>Nuestro blog</h3>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="imagenBlog">
+                    <picture>
+                        <source srcset="img/blog1.webp" type="image/webp"> <!--Primero cae esta instruccion, sino soporta cae al JPG-->
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagenBlog">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tipos de granos de café</h4>
@@ -48,7 +74,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="imagenBlog">
+                    <picture>
+                        <source srcset="img/blog2.webp" type="image/webp"> <!--Primero cae esta instruccion, sino soporta cae al JPG-->
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagenBlog">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Recetas de café</h4>
@@ -59,7 +88,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="imagenBlog">
+                    <picture>
+                        <source srcset="img/blog3.webp" type="image/webp"> <!--Primero cae esta instruccion, sino soporta cae al JPG-->
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagenBlog">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Beneficios del café</h4>

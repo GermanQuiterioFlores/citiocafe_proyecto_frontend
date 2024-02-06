@@ -33,31 +33,30 @@
         </div>
     </header>
     <main class="contenedor">
-        <h2 class="centrar-texto">Nuestros cursos</h3>
-            <div class="curso">
-                <div class="curso__imagen">
-                    <img loading="lazy" src="img/curso2.jpg" alt="imagenCurso">
+        <h2 class="centrar-texto">Contacto</h3>
+            <div class="contacto-bg"></div>
+            <form class="formulario">
+                <div class="campo">
+                    <label class="campo__label" for="nombre">Nombre: </label>
+                    <input class="campo__field" type="text" placeholder="Tu nombre" id="nombre">
                 </div>
-                <div class="curso__informacion">
-                    <h4 class="no-margin">Técnicas de extracción de café</h4>
-                    <p class="widget-curso__label">Precio:<span class="widget-curso__info"> Gratis</span></p>
-                    <p class="widget-curso__label">Cupo:<span class="widget-curso__info"> 20</span></p>
-                    <p class="curso__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut lectus nulla. Sed ut odio nec nisi tristique fermentum. Curabitur ultricies neque nec odio sollicitudin, non eleifend lorem luctus. Fusce nec lacus nec nulla lobortis posuere id in ex. Nullam et nisl arcu. Vivamus ac lorem vel sem cursus pharetra. </p>
+                <div class="campo">
+                    <label class="campo__label" for="email">Correo eletrónico: </label>
+                    <input class="campo__field" type="email" placeholder="Tu correo eletrónico" id="email">
                 </div>
-                
-            </div><!--CIERRE de curso-->
-            <div class="curso">
-                <div class="curso__imagen">
-                    <img loading="lazy" src="img/curso1.jpg" alt="imagenCurso">
+                <div class="campo">
+                    <label class="campo__label" for="telefono">Teléfono: </label>
+                    <input class="campo__field" type="number" placeholder="Tu telefono" id="telefono">
                 </div>
-                <div class="curso__informacion">
-                    <h4 class="no-margin">Recetas para principiantes</h4>
-                    <p class="widget-curso__label">Precio:<span class="widget-curso__info"> Gratis</span></p>
-                    <p class="widget-curso__label">Cupo:<span class="widget-curso__info"> 10</span></p>
-                    <p class="curso__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut lectus nulla. Sed ut odio nec nisi tristique fermentum. Curabitur ultricies neque nec odio sollicitudin, non eleifend lorem luctus. Fusce nec lacus nec nulla lobortis posuere id in ex. Nullam et nisl arcu. Vivamus ac lorem vel sem cursus pharetra. </p>
+                <div class="campo">
+                    <label class="campo__label" for="mensaje">Comentario adicional: </label>
+                    <textarea class="campo__field campo__field--textarea" id="mensaje" placeholder="Agrega un comentario adicional"></textarea>
                 </div>
-                
-            </div><!--CIERRE de curso-->
+                <div class="campo">
+                    <input type="submit" value="Enviar" class="boton boton--primario">
+                </div>
+            </form>
+        
     </main>
     <footer class="footer">
         <div class="contenedor">

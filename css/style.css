@@ -139,6 +139,9 @@ img{
     color: var(--blanco);
     padding: 1rem;
 }
+.navegacion__enlace:hover{
+    background-color: #FFC107;
+}
 
 /* Contenido principal*/
 @media (min-width: 768px) {
@@ -169,6 +172,11 @@ img{
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 2.5rem;
+    border: none;
+}
+.boton:hover{
+    cursor: pointer;
+    background-color: #FFC107;
 }
 @media (min-width: 768px) {
     .boton{
@@ -267,4 +275,39 @@ img{
 }
 .entrada-blog__descripcion{
     text-align: justify;
+}
+
+/* Contacto */
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 3.5rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    font-weight: bold;
+    text-align: justify;
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid #3c7e7e;
+}
+
+.campo__field--textarea{
+    height: 20rem;
+    width: auto;
 }
